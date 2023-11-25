@@ -1,0 +1,3 @@
+text color intro: rgb(221, 220, 220);
+text color slogen:  rgb(239, 235, 235)
+

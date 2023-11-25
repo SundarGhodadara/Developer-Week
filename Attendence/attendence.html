@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Attendance Monitoring</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, select, button {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        button {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+        }
+
+        #attendanceStatus {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Mark Your Attendance Here</h1>
+
+        <form id="attendanceForm" action="attend.php" method="post">
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required>
+
+            <label for="course">Course:</label>
+            <select name="course" id="course">
+                <option value="IT">IT</option>
+                <option value="Civil">Civil</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Mechanical">Mechanical</option>
+            </select>
+
+            <button type="button" onclick="markAttendance()">Mark Attendance</button>
+            <a href="/Home/index.html"><button type="button">Home</button></a>
+
+        </form>
+
+        <div id="attendanceStatus"></div>
+    </main>
+
+    <script src="Attend.js"></script>
+</body>
+</html>

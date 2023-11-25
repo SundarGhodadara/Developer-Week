@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="res.css">
+  <title>Collaborative Learning</title>
+</head>
+<body>
+
+  <header>
+    <h1>Collaborative Learning Platform</h1>
+  </header>
+
+  <main>
+    <section id="collaborativeLearning">
+      <h2>Welcome to Collaborative Learning!</h2>
+      <p>Explore resources, join discussions, and collaborate with peers to enhance your learning experience.</p>
+
+      <div id="resources">
+        <h3>Shared Resources</h3>
+        <ul>
+          <img src="https://www.freecodecamp.org/news/content/images/2022/12/main-image.png" alt="" srcset="">
+          <li><a href="#">Introduction to Programming</a></li>
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230406152358/CN-(1).jpg" alt="" srcset="">
+          <li><a href="#">Computer Networks Lecture Notes</a></li>
+          <img src="https://www.creativeitinstitute.com/images/course/course_1663052056.jpg" alt="" srcset="">
+          <li><a href="#">Web Development Practical</a></li>
+        </ul>
+      </div>
+
+      <div id="discussions">
+        <h3>Discussions</h3>
+        <div id="discussionPosts">
+          <!-- Discussion posts will be dynamically loaded here -->
+        </div>
+        <textarea id="postTextarea" placeholder="Join the discussion..."></textarea>
+        <button type="button" onclick="postDiscussion()">Post</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="res.js"></script>
+</body>
+</html>
